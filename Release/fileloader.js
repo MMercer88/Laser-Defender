@@ -17,8 +17,8 @@ Module.expectedDataFileDownloads++;
     } else {
       throw 'using preloaded data can only be done on a web page or in a web worker';
     }
-    var PACKAGE_NAME = 'Laser Defender.data';
-    var REMOTE_PACKAGE_BASE = 'Laser Defender.data';
+    var PACKAGE_NAME = 'Laser-Defender.data';
+    var REMOTE_PACKAGE_BASE = 'Laser-Defender.data';
     if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
       Module['locateFile'] = Module['locateFilePackage'];
       Module.printErr('warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)');
@@ -26,8 +26,8 @@ Module.expectedDataFileDownloads++;
     var REMOTE_PACKAGE_NAME = typeof Module['locateFile'] === 'function' ?
                               Module['locateFile'](REMOTE_PACKAGE_BASE) :
                               ((Module['filePackagePrefixURL'] || '') + REMOTE_PACKAGE_BASE);
-    var REMOTE_PACKAGE_SIZE = 13378226;
-    var PACKAGE_UUID = 'd9af227c-be72-474f-a14d-8cf7a2242325';
+    var REMOTE_PACKAGE_SIZE = 13381394;
+    var PACKAGE_UUID = '3e6f69d3-2cd8-4b6e-9d6c-cfbf3a799072';
   
     function fetchRemotePackage(packageName, packageSize, callback, errback) {
       var xhr = new XMLHttpRequest();
@@ -125,17 +125,17 @@ Module['FS_createPath']('/', 'Resources', true, true);
         this.requests[this.name] = null;
       },
     };
-      new DataRequest(0, 15176, 0, 0).open('GET', '/level0');
-    new DataRequest(15176, 22848, 0, 0).open('GET', '/level1');
-    new DataRequest(22848, 46972, 0, 0).open('GET', '/mainData');
-    new DataRequest(46972, 47154, 0, 0).open('GET', '/methods_pointedto_by_uievents.xml');
-    new DataRequest(47154, 85706, 0, 0).open('GET', '/sharedassets0.assets');
-    new DataRequest(85706, 11036739, 0, 0).open('GET', '/sharedassets0.resource');
-    new DataRequest(11036739, 11172799, 0, 0).open('GET', '/sharedassets1.assets');
-    new DataRequest(11172799, 11298450, 0, 0).open('GET', '/sharedassets1.resource');
-    new DataRequest(11298450, 11302714, 0, 0).open('GET', '/sharedassets2.assets');
-    new DataRequest(11302714, 12877750, 0, 0).open('GET', '/Resources/unity_default_resources');
-    new DataRequest(12877750, 13378226, 0, 0).open('GET', '/Resources/unity_builtin_extra');
+      new DataRequest(0, 18344, 0, 0).open('GET', '/level0');
+    new DataRequest(18344, 26016, 0, 0).open('GET', '/level1');
+    new DataRequest(26016, 50140, 0, 0).open('GET', '/mainData');
+    new DataRequest(50140, 50322, 0, 0).open('GET', '/methods_pointedto_by_uievents.xml');
+    new DataRequest(50322, 88874, 0, 0).open('GET', '/sharedassets0.assets');
+    new DataRequest(88874, 11039907, 0, 0).open('GET', '/sharedassets0.resource');
+    new DataRequest(11039907, 11175967, 0, 0).open('GET', '/sharedassets1.assets');
+    new DataRequest(11175967, 11301618, 0, 0).open('GET', '/sharedassets1.resource');
+    new DataRequest(11301618, 11305882, 0, 0).open('GET', '/sharedassets2.assets');
+    new DataRequest(11305882, 12880918, 0, 0).open('GET', '/Resources/unity_default_resources');
+    new DataRequest(12880918, 13381394, 0, 0).open('GET', '/Resources/unity_builtin_extra');
 
     function processPackageData(arrayBuffer) {
       Module.finishedDataFileDownloads++;
@@ -156,10 +156,10 @@ Module['FS_createPath']('/', 'Resources', true, true);
           DataRequest.prototype.requests["/sharedassets2.assets"].onload();
           DataRequest.prototype.requests["/Resources/unity_default_resources"].onload();
           DataRequest.prototype.requests["/Resources/unity_builtin_extra"].onload();
-          Module['removeRunDependency']('datafile_Laser Defender.data');
+          Module['removeRunDependency']('datafile_Laser-Defender.data');
 
     };
-    Module['addRunDependency']('datafile_Laser Defender.data');
+    Module['addRunDependency']('datafile_Laser-Defender.data');
   
     if (!Module.preloadResults) Module.preloadResults = {};
   
